@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to Andrew's Graduate Assignment
+
+  .row
+   .col-md-6
+    form(method='GET' action='/index')
+     button.btn.btn-primary(type='submit') Get Request
+  .row
+   .col-md-6
+    form()
+     button.btn.btn-primary(type='button' onclick='callPutRequest()') Put Request
+  .row
+   .col-md-6
+    form(method='POST' action='/index')
+     button.btn.btn-primary(type='submit') Post Request
+  .row
+   .col-md-6
+    form()
+     button.btn.btn-primary(type='button' onclick='callDeleteRequest()') Delete Request

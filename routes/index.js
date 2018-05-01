@@ -1,4 +1,5 @@
-# grad-assignment
+var express = require('express');
+var router = express.Router();
 
 /**
  * With Express, you are given the router.METHOD() methods for handling each specific HTTP method. However, it is possible to have
@@ -14,6 +15,12 @@
  * 3.) For GET/PUT/POST/DELETE methods, add another string saying which request was executed.
  *     Output both strings into the console log at this moment.
  * 4.) For the GET request, render the template.
- * 5.) For the PUT and DELETE request only, make a special middleware function that adds another string and the specific
- *     Method that called the middleware into the console log. This method should also redirect the user back to the template.
+ * 5.) For the PUT and DELETE request only, make a special middleware function that adds another string and outputs the string
+ *     and the specific Method that called the middleware into the console log. This method should also redirect the user back to the template.
  */
+router.route('/')
+/**
+ * Code goes here.
+ */
+
+module.exports = router;
