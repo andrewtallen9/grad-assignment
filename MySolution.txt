@@ -1,0 +1,30 @@
+router.route('/')
+  .all((req, res, next) => {
+    helloString = "Hello!";
+    next();
+  })
+  .get((req, res, next) => {
+    messageString = 'We got to the GET portion!';
+    console.log(helloString + messageString);
+    res.render('index');
+  })
+  .put((req, res, next) => {
+    messageString = 'We got to the PUT portion!';
+    console.log(helloString + messageString);
+    next();
+  })
+  .post((req, res, next) => {
+    messageString = 'We got to the POST portion!';
+    console.log(helloString + messageString);
+  })
+  .delete((req, res, next) => {
+    messageString = 'We got to the DELETE portion!';
+    console.log(helloString + messageString);
+    next();
+  })
+
+router.use((req, res, next) => {
+  bonusString = 'With a bonus! ';
+  console.log(bonusString + req.method);
+  res.redirect('/');
+})

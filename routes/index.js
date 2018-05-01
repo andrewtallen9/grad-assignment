@@ -18,7 +18,7 @@ var router = express.Router();
  * 5.) For the PUT and DELETE request only, make a special middleware function that adds another string and outputs the string
  *     and the specific Method that called the middleware into the console log. This method should also redirect the user back to the template.
  */
-router.route('/')
+
 /**
  * Code goes here.
  */
